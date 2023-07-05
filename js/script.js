@@ -1,7 +1,5 @@
-let pedra = 1
-let papel = 2
-let tesoura = 3
-function jokempo(jogador1, cpu){
+function jokenpo(jogador1){
+    let cpu = Math.floor(Math.random() * (3 - 1 + 1)) + 1
     if(jogador1 == cpu){
         return 'Draw!'
     } else if (jogador1 == 1 && cpu == 2){
@@ -17,5 +15,4 @@ function jokempo(jogador1, cpu){
     }else if (jogador1 == 3 && cpu == 2){
         return 'You Win!'
     }
-    }
-console.log(jokempo(3,2));
+}
