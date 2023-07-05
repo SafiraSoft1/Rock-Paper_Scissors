@@ -25,6 +25,3 @@ function jokenpo(jogador1){
         return 'You Win!'
     }
 }
-
-console.log(jokenpo(1));
-console.log(pontos);
