@@ -41,7 +41,7 @@ html, body{
     position: relative;
     top: -10px;
 }
-button {
+.iconBut {
     border: none;
     height: 100px;
     width: 100px;
@@ -82,4 +82,69 @@ button {
 }
 .divPedra button{
     margin-top: 15px;
+}
+.fundobuttons {
+    border: none;
+    height: 130px;
+    width: 130px;
+    border-radius: 100%;
+}
+.buttons{
+    margin: 380px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.Papel{
+    background-color: #5069e2;
+    height: 160px;
+    width: 160px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+.Papel button{
+    margin-top: 15px;
+}
+.Tesoura{
+    background-color: #e2a12a;
+    height: 130px;
+    width: 130px;
+    text-align: center;
+    border-radius: 50%;
+}
+.Tesoura button{
+    margin-top: 15px;
+}
+.Pedra{
+    background-color: #d93c5b;
+    height: 160px;
+    width: 160px;
+    text-align: center;
+    border-radius: 50%;
+}
+.Pedra button{
+    margin-top: 15px;
+}
+#resultado{
+    color: #fff;
+}
+#retornar{
+    border: none;
+    background-color: #fff;
+    height: 40px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 6px;
+    margin-top: -30px;
+}
+.participantes{
+    display: flex;
+    color: #fff;
+    margin-left: 405px;
+    margin-top: 80px;
+}
+#maquina {
+    margin-left: 300px;
 }
