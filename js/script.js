@@ -1,4 +1,4 @@
-let pontos = parseFloat(document.getElementById('ponto'))
+let pontos = document.getElementById('ponto')
 
 function jokenpo(jogador1){
     let cpu = Math.floor(Math.random() * (3 - 1 + 1)) + 1
