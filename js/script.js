@@ -1,3 +1,15 @@
+function carregarConteudo(){
+    let iframe = document.createElement("iframe");
+    let conteiner = document.getElementsByClassName('conteiner')
+    iframe.setAttribute("src", "./html/escolha.html");
+    conteiner.appendChild(iframe);
+}
+
+window.onload = function() {
+    carregarConteudo()    
+}
+
+
 let pontos = document.getElementById('ponto')
 
 function jokenpo(jogador1){
