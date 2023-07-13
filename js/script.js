@@ -1,14 +1,22 @@
-function carregarConteudo(){
-    let iframe = document.createElement("iframe");
-    let conteiner = document.getElementsByClassName('conteiner')
-    iframe.setAttribute("src", "./html/escolha.html");
-    conteiner.appendChild(iframe);
-}
-
 window.onload = function() {
     carregarConteudo()    
 }
 
+let section = document.getElementById('conteudo')
+
+function carregarConteudo(){
+    fetch('./html/escolha.html')
+        .then( function(resposta){
+            if(resposta.ok){
+                return resposta.text();
+            } else{
+                throw new Error('Erro ao carregar HTML');
+            }
+        })
+        .then(function(html){
+            section.innerHTML = html
+        })
+    }
 
 let pontos = document.getElementById('ponto')
 
