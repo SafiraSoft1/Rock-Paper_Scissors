@@ -1,22 +1,33 @@
-window.onload = function() {
-    carregarConteudo()    
-}
+document.addEventListener('DOMContentLoaded', function() {
+    let section = document.getElementById('conteudo');
 
-let section = document.getElementById('conteudo')
-
-function carregarConteudo(){
-    fetch('./html/escolha.html')
-        .then( function(resposta){
-            if(resposta.ok){
-                return resposta.text();
-            } else{
-                throw new Error('Erro ao carregar HTML');
-            }
-        })
-        .then(function(html){
-            section.innerHTML = html
-        })
+    function carregarConteudo() {
+        fetch('../html/escolha.html')
+            .then(function(resposta) {
+                if (resposta.ok) {
+                    return resposta.text();
+                } else {
+                    throw new Error('Erro ao carregar HTML');
+                }
+            })
+            .then(function(conteudo) {
+                section.innerHTML = conteudo;
+            })
+            .catch(function(erro) {
+                console.error(erro);
+            });
     }
+    carregarConteudo();
+})
+
+
+
+
+
+
+
+
+
 
 let pontos = document.getElementById('ponto')
 
