@@ -37,7 +37,7 @@ function jokenpo(jogador1) {
                 section.innerHTML = telaResultado;
                 let cpu = Math.floor(Math.random() * (3 - 1 + 1)) + 1
                 let resultado = document.getElementById('resultado')
-                if (jogador1 && cpu == 1) {
+                if (jogador1 == 1 && cpu == 1) {
                     resultado.textContent = 'Draw!'
                     document.getElementById('papel').getElementsByTagName('img')[0].src = '../images/icon-rock.svg'
                     document.getElementById('pedra').getElementsByTagName('img')[0].src = '../images/icon-rock.svg'
@@ -71,11 +71,11 @@ function jokenpo(jogador1) {
                     resultado.textContent = 'You Win!'
                     document.getElementById('papel').getElementsByTagName('img')[0].src = '../images/icon-scissors.svg'
                     document.getElementById('pedra').getElementsByTagName('img')[0].src = '../images/icon-paper.svg'
-                } else if (jogador1 && cpu == 2) {
+                } else if (jogador1 == 2 && cpu == 2) {
                     resultado.textContent = 'Draw!'
                     document.getElementById('papel').getElementsByTagName('img')[0].src = '../images/icon-paper.svg'
                     document.getElementById('pedra').getElementsByTagName('img')[0].src = '../images/icon-paper.svg'
-                } else if (jogador1 && cpu == 3) {
+                } else if (jogador1 == 3 && cpu == 3) {
                     resultado.textContent = 'Draw!'
                     document.getElementById('papel').getElementsByTagName('img')[0].src = '../images/icon-scissors.svg'
                     document.getElementById('pedra').getElementsByTagName('img')[0].src = '../images/icon-scissors.svg'
@@ -88,4 +88,22 @@ function jokenpo(jogador1) {
             });
     }
     carregarResultado();
+}
+
+function playAgain() {
+    let section = document.getElementById('conteudo');
+    fetch('../html/escolha.html')
+        .then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.text();
+            } else {
+                throw new Error('Erro ao carregar HTML');
+            }
+        })
+        .then(function (conteudo) {
+            section.innerHTML = conteudo;
+        })
+        .catch(function (erro) {
+            console.error(erro);
+        });
 }
