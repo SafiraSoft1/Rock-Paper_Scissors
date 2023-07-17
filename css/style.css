@@ -48,27 +48,27 @@ html, body{
     border-radius: 100%;
 }
 .escolha{
-    margin-left: 35%;
-    margin-top: 100px;
+    margin-left: 39%;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
 }
 .triangulo{
-margin-left: 609px;
+margin-left: 664px;
 }
 .linha1 {
     background-color: rgba(0, 0, 0, 0.322);
     height: 10px;
     width: 59px;
     position: relative;
-    top: 190px;
+    top: 170px;
 }
 .linha2{
     background-color: rgba(0, 0, 0, 0.322);
     height: 10px;
     width: 46px;
     position: relative;
-    top: 259px;
+    top: 239px;
     right: 50px;
     transform: rotate(55deg);
 }
@@ -77,7 +77,7 @@ margin-left: 609px;
     height: 10px;
     width: 48px;
     position: relative;
-    top: 246px;
+    top: 226px;
     left: 50px;
     transform: rotate(120deg);
 
@@ -161,6 +161,7 @@ margin-left: 609px;
 }
 #resultado{
     color: #fff;
+    text-align: center;
 }
 #retornar{
     border: none;
@@ -182,5 +183,5 @@ margin-left: 609px;
     margin-left: 300px;
 }
 .tudo{
-    margin-top: 200px;
+    margin-top: 80px;
 }
